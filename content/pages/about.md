@@ -5,4 +5,4 @@ date: March 4, 2020
 
 On rebooting into programming later in life.
 
-[aj_blue_painting]: {static}/images/aj_blue_painting_resized_and_scaled.jpg
+[aj_blue_painting_resized_and_scaled]: {static}/images/aj_blue_painting_resized_and_scaled.jpg
