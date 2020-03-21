@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Making progress... - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-03-04T00:00:00-05:00</updated><entry><title>Pomodoro</title><link href="/pomodoro.html" rel="alternate"></link><published>2020-03-04T00:00:00-05:00</published><updated>2020-03-04T00:00:00-05:00</updated><author><name>Andy Jarcho</name></author><id>tag:None,2020-03-04:/pomodoro.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/tomato_car_even_smaller.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Making progress... - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2020-03-21T00:00:00-04:00</updated><entry><title>Talk Dirty to Me</title><link href="/talk-dirty-to-me.html" rel="alternate"></link><published>2020-03-21T00:00:00-04:00</published><updated>2020-03-21T00:00:00-04:00</updated><author><name>Andy Jarcho</name></author><id>tag:None,2020-03-21:/talk-dirty-to-me.html</id><summary type="html">&lt;h1&gt;"Hey Google: What good are you, anyway?"&lt;/h1&gt;
+&lt;p&gt;I'm a Pythonista who believes that 'Every Toaster Is Sacred.' Today's devices are amino acids in the primoridial ooze.&lt;/p&gt;
+&lt;p&gt;So I was pretty happy when I got the chance to acquire a new Google Home&amp;#8482; at a guilt-free price.&lt;/p&gt;
+&lt;p&gt;For several days, it …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;"Hey Google: What good are you, anyway?"&lt;/h1&gt;
+&lt;p&gt;I'm a Pythonista who believes that 'Every Toaster Is Sacred.' Today's devices are amino acids in the primoridial ooze.&lt;/p&gt;
+&lt;p&gt;So I was pretty happy when I got the chance to acquire a new Google Home&amp;#8482; at a guilt-free price.&lt;/p&gt;
+&lt;p&gt;For several days, it treated Google, Inc. to little more than the sounds of 
+me snoring, working at my laptop, and opening and closing the door to my room.
+An early test of the device's audio quality had been disappointing; and after finding out that it could call my
+cell phone but wouldn't tell me what the number was, that it knew my birth date and today's date
+but couldn't tell me when my next birthday will be, I'd basically left it alone.&lt;/p&gt;
+&lt;p&gt;So today I set out to make it misbehave.&lt;/p&gt;
+&lt;p&gt;"Hey Google: What good are you, anyway?"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I'm pretty versatile. I can tell you how many stars are in the galaxy, what the highest note ever sung was, or I can compilment you.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;"Hey google, compliment me."&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your personality is like chocolate: sweet, sweet, sweet&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ick.&lt;/p&gt;
+&lt;p&gt;"Hey google, what was the highest note ever sung?"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On the website wordpress.com, they say the piano has 88 keys. The highest note playable is a high C, often referred to as C8. Do you want a little more context?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;"Yes"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lowest and highest sung notes: Guinness world record. The piano has 88 keys. The highest note playable is a high C, often referred to as C8. For a long time Mariah Carey was credited with the highest note at G7, during a 2003 rendition of "The Star Spangled Banner".&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That noise you hear is opera singers all over the world grinding their teeth.&lt;/p&gt;
+&lt;p&gt;"I want to hear the note"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Alright, here's a Spotify playlist called 'This Is C-Note'&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;"Stop playing"&lt;/p&gt;
+&lt;p&gt;"Hey google, what do you know about me?"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You're smart and you like having fun. Plus you ask me great questions. I couldn't ask for a better friend.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ick again.  &lt;/p&gt;
+&lt;p&gt;"Hey Google, what else do you know about me?"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Depending on your settings, I may reference data in your Google account to give you better responses when you ask for help. To check your current settings, go to g.co/assistant/yourdata to check your current settings. I've also sent a link to your phone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;"Hey Google, what do you know about sex?"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;According to Wikipedia, sexual intercourse (or coitus or copulation) is sexual activity typically involving the insertion and thrusting of the penis into the vagina for sexual pleasure, reproduction, or both. This is also known as vaginal intercourse or vaginal sex.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Woah!&lt;br&gt;
+No longer playing by the rules according to Disney.&lt;br&gt;
+Instead of giving me the Wikipedia page on Sex, my little toy quoted from the page on Sexual Intercourse.  &lt;/p&gt;
+&lt;p&gt;But that was the only amusement it gave me in an hour-long session. About as much fun as an electric toothbrush, and perhaps a 
+little less useful.&lt;/p&gt;
+&lt;p&gt;(Sigh) I think I'll go brush my teeth.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Pomodoro</title><link href="/pomodoro.html" rel="alternate"></link><published>2020-03-04T00:00:00-05:00</published><updated>2020-03-04T00:00:00-05:00</updated><author><name>Andy Jarcho</name></author><id>tag:None,2020-03-04:/pomodoro.html</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/tomato_car_even_smaller.png"&gt;&lt;/p&gt;
 &lt;h2&gt;Step away from the keyboard! Step AWAY from the keyboard!&lt;/h2&gt;
 &lt;h4&gt;The Tomato Timer&lt;/h4&gt;
 &lt;p&gt;Programmers, picture this: You sit down to code, hack at a problem for three hours, consume 20 ounces of black coffee, and are finally forced by the coffee to answer the call of nature.&lt;/p&gt;
