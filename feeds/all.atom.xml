@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Making progress...</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2020-03-30T00:00:00-04:00</updated><entry><title>But It Looked Like a Nail</title><link href="/but-it-looked-like-a-nail.html" rel="alternate"></link><published>2020-03-30T00:00:00-04:00</published><updated>2020-03-30T00:00:00-04:00</updated><author><name>Andy Jarcho</name></author><id>tag:None,2020-03-30:/but-it-looked-like-a-nail.html</id><summary type="html">&lt;h1&gt;Hitting pytest's capsys with a hammer&lt;/h1&gt;
+&lt;h3&gt;The introduction&lt;/h3&gt;
+&lt;p&gt;I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script, called Caffeine Monitor, that I'm writing.&lt;/p&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
-&lt;p&gt;The code to be tested is from a script that keeps tabs (ahem) on the amount of caffeine in your body.&lt;/p&gt;
+&lt;p&gt;Caffeine Monitor keeps tabs (ahem) on the amount of caffeine in your body.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;If you call the script with no arguments, it gets your previous reading (level and time) from a .json file. Then …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;Hitting pytest's capsys with a hammer&lt;/h1&gt;
+&lt;p&gt;If you call it with …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;Hitting pytest's capsys with a hammer&lt;/h1&gt;
+&lt;h3&gt;The introduction&lt;/h3&gt;
+&lt;p&gt;I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script, called Caffeine Monitor, that I'm writing.&lt;/p&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
-&lt;p&gt;The code to be tested is from a script that keeps tabs (ahem) on the amount of caffeine in your body.&lt;/p&gt;
+&lt;p&gt;Caffeine Monitor keeps tabs (ahem) on the amount of caffeine in your body.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;If you call the script with no arguments, it gets your previous reading (level and time) from a .json file. Then it &lt;/p&gt;
+&lt;p&gt;If you call it with no arguments, the script gets your previous reading (level and time) from a .json file. Then it &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;calculates your current caffeine level from that data based on a simple formula&lt;/li&gt;
 &lt;li&gt;writes the new level and time to stdout, and&lt;/li&gt;
@@ -118,6 +122,8 @@ instance and a pair of file names, respectively)&lt;/p&gt;
 &lt;p&gt;Log levels (sigh). I'd assumed that, since the root logger level was set to &lt;code&gt;DEBUG&lt;/code&gt;, any
 message of that level or higher would be sent to &lt;code&gt;caplog&lt;/code&gt;. It turns out that, like the root logger, &lt;code&gt;caplog&lt;/code&gt;'s 
 default level is &lt;code&gt;WARNING&lt;/code&gt;. Hence caplog was not seeing the messages logged by &lt;code&gt;CaffeineMonitor.write_file()&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;The upshot&lt;/h3&gt;
+&lt;p&gt;Test coverage is at 61% and climbing.&lt;/p&gt;
 &lt;h3&gt;The lesson&lt;/h3&gt;
 &lt;p&gt;Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
 have to be skimmed. In this case I happened to skim, and did not absorb, the datum that would have saved me hours

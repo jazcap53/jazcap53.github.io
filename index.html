@@ -30,11 +30,13 @@
 <p>In <a href="/category/misc.html">misc</a>.</p>
 
 </footer><!-- /.post-info --><h1>Hitting pytest's capsys with a hammer</h1>
+<h3>The introduction</h3>
+<p>I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script, called Caffeine Monitor, that I'm writing.</p>
 <h3>The problem</h3>
-<p>The code to be tested is from a script that keeps tabs (ahem) on the amount of caffeine in your body.</p>
+<p>Caffeine Monitor keeps tabs (ahem) on the amount of caffeine in your body.</p>
 <ul>
 <li>
-<p>If you call the script with no arguments, it gets your previous reading (level and time) from a .json file. Then it </p>
+<p>If you call it with no arguments, the script gets your previous reading (level and time) from a .json file. Then it </p>
 <ul>
 <li>calculates your current caffeine level from that data based on a simple formula</li>
 <li>writes the new level and time to stdout, and</li>
@@ -143,6 +145,8 @@ instance and a pair of file names, respectively)</p>
 <p>Log levels (sigh). I'd assumed that, since the root logger level was set to <code>DEBUG</code>, any
 message of that level or higher would be sent to <code>caplog</code>. It turns out that, like the root logger, <code>caplog</code>'s 
 default level is <code>WARNING</code>. Hence caplog was not seeing the messages logged by <code>CaffeineMonitor.write_file()</code>.</p>
+<h3>The upshot</h3>
+<p>Test coverage is at 61% and climbing.</p>
 <h3>The lesson</h3>
 <p>Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
 have to be skimmed. In this case I happened to skim, and did not absorb, the datum that would have saved me hours
