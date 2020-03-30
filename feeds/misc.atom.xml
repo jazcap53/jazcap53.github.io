@@ -118,40 +118,6 @@ instance and a pair of file names, respectively)&lt;/p&gt;
 &lt;p&gt;Log levels (sigh). I'd assumed that, since the root logger level was set to &lt;code&gt;DEBUG&lt;/code&gt;, any
 message of that level or higher would be sent to &lt;code&gt;caplog&lt;/code&gt;. It turns out that, like the root logger, &lt;code&gt;caplog&lt;/code&gt;'s 
 default level is &lt;code&gt;WARNING&lt;/code&gt;. Hence caplog was not seeing the messages logged by &lt;code&gt;CaffeineMonitor.write_file()&lt;/code&gt;.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Level&lt;/th&gt;
-&lt;th align="right"&gt;Value&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;CRITICAL&lt;/td&gt;
-&lt;td align="right"&gt;50&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ERROR&lt;/td&gt;
-&lt;td align="right"&gt;40&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;WARNING&lt;/td&gt;
-&lt;td align="right"&gt;30&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;INFO&lt;/td&gt;
-&lt;td align="right"&gt;20&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;DEBUG&lt;/td&gt;
-&lt;td align="right"&gt;10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;NOTSET&lt;/td&gt;
-&lt;td align="right"&gt;0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 &lt;h3&gt;The lesson&lt;/h3&gt;
 &lt;p&gt;Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
 have to be skimmed. In this case I happened to skim, and did not absorb, the datum that would have saved me hours

@@ -148,40 +148,6 @@ instance and a pair of file names, respectively)</p>
 <p>Log levels (sigh). I'd assumed that, since the root logger level was set to <code>DEBUG</code>, any
 message of that level or higher would be sent to <code>caplog</code>. It turns out that, like the root logger, <code>caplog</code>'s 
 default level is <code>WARNING</code>. Hence caplog was not seeing the messages logged by <code>CaffeineMonitor.write_file()</code>.</p>
-<table>
-<thead>
-<tr>
-<th>Level</th>
-<th align="right">Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CRITICAL</td>
-<td align="right">50</td>
-</tr>
-<tr>
-<td>ERROR</td>
-<td align="right">40</td>
-</tr>
-<tr>
-<td>WARNING</td>
-<td align="right">30</td>
-</tr>
-<tr>
-<td>INFO</td>
-<td align="right">20</td>
-</tr>
-<tr>
-<td>DEBUG</td>
-<td align="right">10</td>
-</tr>
-<tr>
-<td>NOTSET</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
 <h3>The lesson</h3>
 <p>Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
 have to be skimmed. In this case I happened to skim, and did not absorb, the datum that would have saved me hours
