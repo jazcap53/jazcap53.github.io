@@ -118,15 +118,6 @@ Log levels (sigh). I'd assumed that, since the root logger level was set to `DEB
 message of that level or higher would be sent to `caplog`. It turns out that, like the root logger, `caplog`'s 
 default level is `WARNING`. Hence caplog was not seeing the messages logged by `CaffeineMonitor.write_file()`.
 
-| Level    | Value         |
-|  ------- | -------------:|
-| CRITICAL |   50          |
-| ERROR    |   40          |
-| WARNING  |   30          |
-| INFO     |   20          |
-| DEBUG    |   10          |
-| NOTSET   |    0          |
-
 ### The lesson
 Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
 have to be skimmed. In this case I happened to skim, and did not absorb, the datum that would have saved me hours
