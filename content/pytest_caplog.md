@@ -4,9 +4,10 @@ author: Andy Jarcho
 
 # Hitting pytest's capsys with a hammer
 ### The introduction
-I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script, called Caffeine Monitor, that I'm writing.
+I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script-in-progress, called 
+Caffeine Monitor.
 
-### The problem
+### The system under test
 Caffeine Monitor keeps tabs (ahem) on the amount of caffeine in your body.
 
 * If you call it with no arguments, the script gets your previous reading (level and time) from a .json file. Then it 
@@ -122,7 +123,7 @@ message of that level or higher would be sent to `caplog`. It turns out that, li
 default level is `WARNING`. Hence caplog was not seeing the messages logged by `CaffeineMonitor.write_file()`.
 
 ### The upshot
-Test coverage is at 61% and climbing.
+Test coverage is at 61% and climbing!
 
 ### The lesson
 Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
