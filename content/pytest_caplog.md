@@ -3,10 +3,13 @@ date: March 30, 2020
 author: Andy Jarcho
 
 # Hitting pytest's capsys with a hammer
-### The problem
-The code to be tested is from a script that keeps tabs (ahem) on the amount of caffeine in your body.
+### The introduction
+I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script, called Caffeine Monitor, that I'm writing.
 
-* If you call the script with no arguments, it gets your previous reading (level and time) from a .json file. Then it 
+### The problem
+Caffeine Monitor keeps tabs (ahem) on the amount of caffeine in your body.
+
+* If you call it with no arguments, the script gets your previous reading (level and time) from a .json file. Then it 
     * calculates your current caffeine level from that data based on a simple formula
     * writes the new level and time to stdout, and
     * overwrites the .json file with the new reading.
@@ -118,12 +121,10 @@ Log levels (sigh). I'd assumed that, since the root logger level was set to `DEB
 message of that level or higher would be sent to `caplog`. It turns out that, like the root logger, `caplog`'s 
 default level is `WARNING`. Hence caplog was not seeing the messages logged by `CaffeineMonitor.write_file()`.
 
+### The upshot
+Test coverage is at 61% and climbing.
+
 ### The lesson
 Reading documentation is something of an art form. You often can't read all the docs word-for-word; parts of it
 have to be skimmed. In this case I happened to skim, and did not absorb, the datum that would have saved me hours
 of work. 
-
-
-
-
-
