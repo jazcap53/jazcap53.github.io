@@ -1,8 +1,8 @@
-title: But It Looked Like a Nail
+title: Hitting Pytest's caplog with a Hammer
 date: March 30, 2020
 author: Andy Jarcho
 
-# Hitting pytest's capsys with a hammer
+# But it looked like a nail...
 ### The introduction
 I've been trying to improve the (then 51%, as measured by pytest-cov) coverage on a script-in-progress, called 
 Caffeine Monitor.
