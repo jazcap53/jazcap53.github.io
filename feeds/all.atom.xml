@@ -12,12 +12,20 @@ Return centered in a string of length width. Padding is done using the specified
 Return centered in a string of length width. Padding is done using the specified fillchar (default is an ASCII space). The original string is returned if width is less than or equal to len(s).&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;OK. But what happens when len(s) is odd and width is even, or vice versa? Then, it's not possible to exactly center the string in the output field.&lt;/p&gt;
-&lt;p&gt;When you call, e.g.,&lt;br&gt;
-&lt;code&gt;'hello'.center(10, '^')&lt;/code&gt;,&lt;br&gt;
+&lt;p&gt;When you call, e.g.,  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;#39;hello&amp;#39;.center(10, &amp;#39;^&amp;#39;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;,&lt;br&gt;
 Python has to choose between '^^^hello^^' and '^^hello^^^'. In this case, Python chooses '^^hello^^^'. 
 The shorter segment of padding appears before the input string; the longer padding comes after.&lt;/p&gt;
-&lt;p&gt;But, when you call&lt;br&gt;
-&lt;code&gt;'heck'.center(9, '^')&lt;/code&gt;,&lt;br&gt;
+&lt;p&gt;But, when you call  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;&amp;#39;heck&amp;#39;.center(9, &amp;#39;^&amp;#39;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;,&lt;br&gt;
 the output is '^^^heck^^', with the &lt;em&gt;longer&lt;/em&gt; piece of padding going first.&lt;/p&gt;
 &lt;p&gt;PyPy, cython, and jython all exhibit the same behavior.&lt;/p&gt;
 &lt;p&gt;That's always struck me as odd, so I looked into Python's source code for the implementation.&lt;/p&gt;
@@ -67,8 +75,7 @@ and everybody goes home happy.&lt;/p&gt;
   * if &lt;code&gt;width&lt;/code&gt; is even, Python adds 0 to &lt;code&gt;left&lt;/code&gt;, and our extra fill character appears to the &lt;em&gt;right&lt;/em&gt; of S.&lt;/p&gt;
 &lt;p&gt;Why is this behavior undocumented? The answer lies in 
 &lt;a href="https://devguide.python.org/documenting/#economy-of-expression"&gt;Section 7.2.5&lt;/a&gt; 
-of the Python Developer's Guide: "Economy of Expression".&lt;br&gt;
-Its first sentence reads:&lt;/p&gt;
+of the Python Developer's Guide: "Economy of Expression". Its first sentence reads:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;More documentation is not necessarily better documentation. 
 Err on the side of being succinct.&lt;/p&gt;

@@ -42,12 +42,20 @@
 Return centered in a string of length width. Padding is done using the specified fillchar (default is an ASCII space). The original string is returned if width is less than or equal to len(s).</p>
 </blockquote>
 <p>OK. But what happens when len(s) is odd and width is even, or vice versa? Then, it's not possible to exactly center the string in the output field.</p>
-<p>When you call, e.g.,<br>
-<code>'hello'.center(10, '^')</code>,<br>
+<p>When you call, e.g.,  </p>
+<div class="highlight"><pre><span></span><code><span class="err">&#39;hello&#39;.center(10, &#39;^&#39;)</span>
+</code></pre></div>
+
+
+<p>,<br>
 Python has to choose between '^^^hello^^' and '^^hello^^^'. In this case, Python chooses '^^hello^^^'. 
 The shorter segment of padding appears before the input string; the longer padding comes after.</p>
-<p>But, when you call<br>
-<code>'heck'.center(9, '^')</code>,<br>
+<p>But, when you call  </p>
+<div class="highlight"><pre><span></span><code><span class="err">&#39;heck&#39;.center(9, &#39;^&#39;)</span>
+</code></pre></div>
+
+
+<p>,<br>
 the output is '^^^heck^^', with the <em>longer</em> piece of padding going first.</p>
 <p>PyPy, cython, and jython all exhibit the same behavior.</p>
 <p>That's always struck me as odd, so I looked into Python's source code for the implementation.</p>
@@ -97,8 +105,7 @@ and everybody goes home happy.</p>
   * if <code>width</code> is even, Python adds 0 to <code>left</code>, and our extra fill character appears to the <em>right</em> of S.</p>
 <p>Why is this behavior undocumented? The answer lies in 
 <a href="https://devguide.python.org/documenting/#economy-of-expression">Section 7.2.5</a> 
-of the Python Developer's Guide: "Economy of Expression".<br>
-Its first sentence reads:</p>
+of the Python Developer's Guide: "Economy of Expression". Its first sentence reads:</p>
 <blockquote>
 <p>More documentation is not necessarily better documentation. 
 Err on the side of being succinct.</p>
