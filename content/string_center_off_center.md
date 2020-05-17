@@ -13,18 +13,16 @@ Return centered in a string of length width. Padding is done using the specified
 OK. But what happens when len(s) is odd and width is even, or vice versa? Then, it's not possible to exactly center the string in the output field.
 
 When you call, e.g.,  
-```
+```python
 'hello'.center(10, '^')
-```
-,  
+```  
 Python has to choose between '^^^hello^^' and '^^hello^^^'. In this case, Python chooses '^^hello^^^'. 
 The shorter segment of padding appears before the input string; the longer padding comes after.
 
 But, when you call  
-```
+```python
 'heck'.center(9, '^')
-```
-,  
+```  
 the output is '^^^heck^^', with the *longer* piece of padding going first.
 
 PyPy, cython, and jython all exhibit the same behavior.
@@ -63,18 +61,18 @@ These three lines show what's going on:
 ```
 Let's refer to our input string as 'S'. `PyUnicode_GET_LENGTH(self)` 
 is simply the length of S. So, if `width` (our field width) and len(S) have 
-the same parity: 
-* `marg` will be even, 
-* `(marg & width & 1)` will be 0, 
-* `left` will equal `marg - left`, 
-* there will be the same amount of padding before and after S,  
+the same parity:  
+* `marg` will be even,  
+* `(marg & width & 1)` will be 0,   
+* `left` will equal `marg - left`,  
+* there will be the same amount of padding before and after S,    
 and everybody goes home happy.
 
 But if `width` and len(S) have **different** parity: 
-* `marg` will be odd, 
-* `left` will differ from `marg - left` by exactly 1,
-  * if `width` is odd, Python adds 1 to `left`, and our extra fill character appears to the left of S,
-  * if `width` is even, Python adds 0 to `left`, and our extra fill character appears to the *right* of S.
+* `marg` will be odd,  
+* `left` will differ from `marg - left` by exactly 1,  
+  * if `width` is odd, Python adds 1 to `left`, and our extra fill character appears to the left of S,  
+  * if `width` is even, Python adds 0 to `left`, and our extra fill character appears to the *right* of S.  
 
 Why is this behavior undocumented? The answer lies in 
 [Section 7.2.5](https://devguide.python.org/documenting/#economy-of-expression) 
