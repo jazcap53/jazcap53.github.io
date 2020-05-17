@@ -62,15 +62,13 @@ These three lines show what's going on:
 Let's refer to our input string as 'S'. `PyUnicode_GET_LENGTH(self)` 
 is simply the length of S. So, if `width` (our field width) and len(S) have 
 the same parity:  
-
 - `marg` will be even,  
 - `(marg & width & 1)` will be 0,   
 - `left` will equal `marg - left`,  
-- there will be the same amount of padding before and after S,    
+- there will be the same amount of padding before and after S,  
 and everybody goes home happy.
 
 But if `width` and len(S) have **different** parity:  
-
 - `marg` will be odd,  
 - `left` will differ from `marg - left` by exactly 1,  
    - if `width` is odd, Python adds 1 to `left`, and our extra fill character appears to the left of S,  
