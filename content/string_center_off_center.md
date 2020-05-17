@@ -13,12 +13,18 @@ Return centered in a string of length width. Padding is done using the specified
 OK. But what happens when len(s) is odd and width is even, or vice versa? Then, it's not possible to exactly center the string in the output field.
 
 When you call, e.g.,  
-`'hello'.center(10, '^')`,  
+```
+'hello'.center(10, '^')
+```
+,  
 Python has to choose between '^^^hello^^' and '^^hello^^^'. In this case, Python chooses '^^hello^^^'. 
 The shorter segment of padding appears before the input string; the longer padding comes after.
 
 But, when you call  
-`'heck'.center(9, '^')`,  
+```
+'heck'.center(9, '^')
+```
+,  
 the output is '^^^heck^^', with the *longer* piece of padding going first.
 
 PyPy, cython, and jython all exhibit the same behavior.
@@ -72,8 +78,7 @@ But if `width` and len(S) have **different** parity:
 
 Why is this behavior undocumented? The answer lies in 
 [Section 7.2.5](https://devguide.python.org/documenting/#economy-of-expression) 
-of the Python Developer's Guide: "Economy of Expression".  
-Its first sentence reads:
+of the Python Developer's Guide: "Economy of Expression". Its first sentence reads:
 >More documentation is not necessarily better documentation. 
 >Err on the side of being succinct.
 
