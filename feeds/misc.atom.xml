@@ -60,17 +60,21 @@ I found the relevant code in 'cpython/Objects/unicodeobject.c'.&lt;/p&gt;
 
 &lt;p&gt;Let's refer to our input string as 'S'. &lt;code&gt;PyUnicode_GET_LENGTH(self)&lt;/code&gt; 
 is simply the length of S. So, if &lt;code&gt;width&lt;/code&gt; (our field width) and len(S) have 
-the same parity:&lt;br&gt;
-&lt;em&gt; &lt;code&gt;marg&lt;/code&gt; will be even,&lt;br&gt;
-&lt;/em&gt; &lt;code&gt;(marg &amp;amp; width &amp;amp; 1)&lt;/code&gt; will be 0, &lt;br&gt;
-&lt;em&gt; &lt;code&gt;left&lt;/code&gt; will equal &lt;code&gt;marg - left&lt;/code&gt;,&lt;br&gt;
-&lt;/em&gt; there will be the same amount of padding before and after S,  &lt;br&gt;
-and everybody goes home happy.&lt;/p&gt;
-&lt;p&gt;But if &lt;code&gt;width&lt;/code&gt; and len(S) have &lt;strong&gt;different&lt;/strong&gt; parity:&lt;br&gt;
-&lt;em&gt; &lt;code&gt;marg&lt;/code&gt; will be odd,&lt;br&gt;
-&lt;/em&gt; &lt;code&gt;left&lt;/code&gt; will differ from &lt;code&gt;marg - left&lt;/code&gt; by exactly 1,&lt;br&gt;
-  * if &lt;code&gt;width&lt;/code&gt; is odd, Python adds 1 to &lt;code&gt;left&lt;/code&gt;, and our extra fill character appears to the left of S,&lt;br&gt;
-  * if &lt;code&gt;width&lt;/code&gt; is even, Python adds 0 to &lt;code&gt;left&lt;/code&gt;, and our extra fill character appears to the &lt;em&gt;right&lt;/em&gt; of S.  &lt;/p&gt;
+the same parity:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;marg&lt;/code&gt; will be even,  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(marg &amp;amp; width &amp;amp; 1)&lt;/code&gt; will be 0,   &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;left&lt;/code&gt; will equal &lt;code&gt;marg - left&lt;/code&gt;,  &lt;/li&gt;
+&lt;li&gt;there will be the same amount of padding before and after S,  &lt;br&gt;
+and everybody goes home happy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;But if &lt;code&gt;width&lt;/code&gt; and len(S) have &lt;strong&gt;different&lt;/strong&gt; parity:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;marg&lt;/code&gt; will be odd,  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;left&lt;/code&gt; will differ from &lt;code&gt;marg - left&lt;/code&gt; by exactly 1,  &lt;/li&gt;
+&lt;li&gt;if &lt;code&gt;width&lt;/code&gt; is odd, Python adds 1 to &lt;code&gt;left&lt;/code&gt;, and our extra fill character appears to the left of S,  &lt;/li&gt;
+&lt;li&gt;if &lt;code&gt;width&lt;/code&gt; is even, Python adds 0 to &lt;code&gt;left&lt;/code&gt;, and our extra fill character appears to the &lt;em&gt;right&lt;/em&gt; of S.  &lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Why is this behavior undocumented? The answer lies in 
 &lt;a href="https://devguide.python.org/documenting/#economy-of-expression"&gt;Section 7.2.5&lt;/a&gt; 
 of the Python Developer's Guide: "Economy of Expression". Its first sentence reads:&lt;/p&gt;
