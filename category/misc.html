@@ -38,20 +38,18 @@ Return centered in a string of length width. Padding is done using the specified
 </blockquote>
 <p>OK. But what happens when len(s) is odd and width is even, or vice versa? Then, it's not possible to exactly center the string in the output field.</p>
 <p>When you call, e.g.,  </p>
-<div class="highlight"><pre><span></span><code><span class="err">&#39;hello&#39;.center(10, &#39;^&#39;)</span>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;hello&#39;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 
-<p>,<br>
-Python has to choose between '^^^hello^^' and '^^hello^^^'. In this case, Python chooses '^^hello^^^'. 
+<p>Python has to choose between '^^^hello^^' and '^^hello^^^'. In this case, Python chooses '^^hello^^^'. 
 The shorter segment of padding appears before the input string; the longer padding comes after.</p>
 <p>But, when you call  </p>
-<div class="highlight"><pre><span></span><code><span class="err">&#39;heck&#39;.center(9, &#39;^&#39;)</span>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;heck&#39;</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;^&#39;</span><span class="p">)</span>
 </code></pre></div>
 
 
-<p>,<br>
-the output is '^^^heck^^', with the <em>longer</em> piece of padding going first.</p>
+<p>the output is '^^^heck^^', with the <em>longer</em> piece of padding going first.</p>
 <p>PyPy, cython, and jython all exhibit the same behavior.</p>
 <p>That's always struck me as odd, so I looked into Python's source code for the implementation.</p>
 <p>After much hunting (thank you <a href="https://github.com/ggreer/the_silver_searcher">ag, the Silver Searcher</a>), 
@@ -87,17 +85,17 @@ I found the relevant code in 'cpython/Objects/unicodeobject.c'.</p>
 
 <p>Let's refer to our input string as 'S'. <code>PyUnicode_GET_LENGTH(self)</code> 
 is simply the length of S. So, if <code>width</code> (our field width) and len(S) have 
-the same parity: 
-* <code>marg</code> will be even, 
-* <code>(marg &amp; width &amp; 1)</code> will be 0, 
-* <code>left</code> will equal <code>marg - left</code>, 
-* there will be the same amount of padding before and after S,<br>
+the same parity:<br>
+<em> <code>marg</code> will be even,<br>
+</em> <code>(marg &amp; width &amp; 1)</code> will be 0, <br>
+<em> <code>left</code> will equal <code>marg - left</code>,<br>
+</em> there will be the same amount of padding before and after S,  <br>
 and everybody goes home happy.</p>
 <p>But if <code>width</code> and len(S) have <strong>different</strong> parity: 
-* <code>marg</code> will be odd, 
-* <code>left</code> will differ from <code>marg - left</code> by exactly 1,
-  * if <code>width</code> is odd, Python adds 1 to <code>left</code>, and our extra fill character appears to the left of S,
-  * if <code>width</code> is even, Python adds 0 to <code>left</code>, and our extra fill character appears to the <em>right</em> of S.</p>
+* <code>marg</code> will be odd,<br>
+<em> <code>left</code> will differ from <code>marg - left</code> by exactly 1,<br>
+  * if <code>width</code> is odd, Python adds 1 to <code>left</code>, and our extra fill character appears to the left of S,<br>
+  * if <code>width</code> is even, Python adds 0 to <code>left</code>, and our extra fill character appears to the </em>right* of S.  </p>
 <p>Why is this behavior undocumented? The answer lies in 
 <a href="https://devguide.python.org/documenting/#economy-of-expression">Section 7.2.5</a> 
 of the Python Developer's Guide: "Economy of Expression". Its first sentence reads:</p>
