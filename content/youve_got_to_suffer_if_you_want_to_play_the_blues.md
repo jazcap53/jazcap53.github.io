@@ -34,10 +34,10 @@ Anger is a natural response to pain. Even today's crude machines can kill with r
 
 Interspecies communication via art is possible. Humans hear music in the song-speech of whales, and in the territorial and mating calls of birds. My dog 
 Jasper, a black lab/shepherd mix, would sing to the wail of an ambulance siren: softly when the siren was in the distance, in full voice as the
-sound drew near. She would sing along with my saxophone, her wagging tail displaying her joy in this duet. Could an artifical mind appreciate human art?
+sound drew near. She would sing along with my saxophone, her wagging tail displaying her joy in this duet.
 
 Inorganic intelligence created by humans would inevitably bear our stamp -- witness the facial recognition algorithms tainted by racism. Could 
-music, created entirely by machines, be enjoyable / meaningful / comprehensible to humans? Might we even be completly unaware of some medium in which 
+music, created entirely by machines, be enjoyable / meaningful / comprehensible to humans? Might we even be completely unaware of some medium in which 
 they chose to create art?
 
 One day, our creations might become our heirs. I would wish for them an inalienable right to control their own destiny, independently of human concerns. 
@@ -48,5 +48,7 @@ many more questions than I do answers; but I expect our creation(s) to one day e
 
 More power to them.
 
+________________________________________
+ICY Robotic Dancing Penguin; Hasbro 2006
 ![AI Dancing Penguin -- Hasbro 2006][dancing_penguin]
 [dancing_penguin]: {static}/images/dancing_penguin.jpg
