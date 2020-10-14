@@ -6,7 +6,7 @@ author: Andy Jarcho
 # "Hey Google: What good are you, anyway?"
 
 
-I'm a Pythonista who believes that 'Every Toaster Is Sacred.' Today's devices are amino acids in the primoridial ooze.
+I'm a Pythonista who believes that 'Every Toaster Is Sacred.' Today's devices are amino acids in the primordial ooze.
 
 So I was pretty happy when I got the chance to acquire a new Google Home&#8482; at a guilt-free price.
 
